@@ -1,25 +1,36 @@
 body{
+ 
     margin: auto;
     padding: 2rem;
+    width: 90vw;
 }
 
 img{
     width: 100%;
+   
 }
 
 .main-container{
     font-family: 'Marck Script', cursive;
+   
+    margin: auto;
+  
 }
 
 .main-container__content{
     background-image: url(/assets/img/d5361f1a-7815-4a2a-8afa-22dfe0d3732b-PhotoRoom.png);
-    width:240px ;
-    height: 200px;
+    width:160px ;
+    height: 270px;
     background-size: cover;
     margin: auto;
     margin-top: 1rem;
     padding-left: 2px;
     padding-right: 2px;
+    border-radius: 100%;
+    
+}
+.main-main{
+    margin: auto;
 }
 
 .line-1{
@@ -41,6 +52,7 @@ img{
     -webkit-background-clip:text;
     -webkit-text-fill-color: transparent;
     font-size: 130%;
+    text-align: center;
 }
 
 @keyframes typewriter{
