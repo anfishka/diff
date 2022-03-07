@@ -1,0 +1,53 @@
+body{
+    margin: auto;
+    padding: 2rem;
+}
+
+img{
+    width: 100%;
+}
+
+.main-container{
+    font-family: 'Marck Script', cursive;
+}
+
+.main-container__content{
+    background-image: url(/assets/img/d5361f1a-7815-4a2a-8afa-22dfe0d3732b-PhotoRoom.png);
+    width:240px ;
+    height: 200px;
+    background-size: cover;
+    margin: auto;
+    margin-top: 1rem;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.line-1{
+    border-right: 2px solid rgba(255, 255, 255, .75);
+    font-size: 160%;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #f7306c;
+}
+
+.anim-typewriter{
+    animation: typewriter 5s steps(44) 1s normal both,
+                blinkTextCursor 500ms steps(44) ;
+}
+
+.line-2{
+    color: #000;
+    background: linear-gradient(to top, #fa709a, #e2376a, #030f53);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    font-size: 130%;
+}
+
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 10em;}
+}
+@keyframes blinkTextCursor{
+    from{border-right-color:rgba(255, 255, 255, 255) ;}
+    to{border-right-color:transparent ;}
+}
