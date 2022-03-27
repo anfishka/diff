@@ -1,85 +1,230 @@
-html{
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    border: 0;
     box-sizing: border-box;
 }
-    *,*:after, *:before{
-    box-sizing: inherit;
+a{
+    text-decoration: none;
 }
-
-body{
-   
- /*
-    margin: auto;
-    width: 90vw;
-*/
-}
-.main-main{
-    margin: auto;
-    width: 90vw;
-
+ul,ol,li{
+    list-style:none ;
 }
 img{
-    width: 100%;
-    border-radius: 50%;
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-weight: inherit;
+    font-size: inherit;
+}
+html,
+body{
+    height: 100%;
+    line-height: 1;
+    font-size: 14px;
+    color: #252B42;
+    font-weight: 500;
+    font-family: Montserrat;
+}
+.wrapper{
+    min-height: 100%;
     overflow: hidden;
-    width:10rem;
-    height:10rem;
-    object-fit: cover;
-   
-    
+    display: flex;
+    flex-direction: column;
 }
-
-.main-container{
-    text-align: center;
-    font-family: 'Marck Script', cursive;
-    margin: auto;
-    position: fixed;
-    margin: 1.5rem;
+._container{
+    max-width: 1046px;
+    padding: 0px 15px;
+    margin: 0px auto;
+    box-sizing: content-box;/*изменение расчета ширины*/
+    width: 70vw;/*проверочное свойство*/
+margin: 0 auto;/*проверочное свойство*/
+line-height: 5rem;/*проверочное свойство*/
 }
-
-.main-container__content{
-    width:260px ;
-    height: 280px;
-    background-size: cover;
-    margin: auto;
-    
-    
+._ibg{
+    position: relative;
 }
-.main-main{
-    margin: auto;
-}
-
-.line-1{
- 
-    border-right: 2px solid rgba(255, 255, 255, .75);
-    font-size: 160%;
-    overflow: hidden;
-    white-space: nowrap;
-    color: #f7306c;
-    
-}
-
-.anim-typewriter{
-    animation: typewriter 5s steps(44) 1s normal both,
-                blinkTextCursor 500ms steps(44) ;
-}
-
-.line-2{
-    color: #000;
-    background: linear-gradient(to top, #fa709a, #e2376a, #030f53);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color: transparent;
-    font-size: 130%;
-    text-align: center;
-}
-#main-video{
+._ibg img{
     position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
 }
 
-@keyframes typewriter{
-    from{width: 0;}
-    to{width: 10em;}
+/*------ШАПКА--------------------------------------------------------------------------------------------------------------------------------*/
+.header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    
 }
-@keyframes blinkTextCursor{
-    from{border-right-color:rgba(255, 255, 255, 255) ;}
-    to{border-right-color:transparent ;}
+.header__container {
+    display: flex;
+    min-height: 104px; /*REM?*/
+    align-items: center;
+    
+}
+@media (max-width:479px){
+    .header__container{
+    min-height:70px;}
+}
+.header__logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: inherit;
+}
+.header__menu {
+    margin: 0px 0px 0px 133px;
+}
+@media(max-width:992px){
+    .header__menu{
+    margin: 0px 0px 0px 80px;}
+}
+@media(max-width:767px){
+    .header__menu{
+    margin: 0px 0px 0px 20px;}
+}
+@media(max-width:479px){
+    .header__menu{
+    margin: 0px 0px 0px 40px;}
+}
+.menu {
+    padding: 5px 0;/*отступы безопасности*/
+}
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.menu__item{
+   
+}
+.menu__item:not(:last-child()){
+    margin: 0px 21px 0px 0px;/*убираем отступ у последнего элемента*/
+}
+.menu__link {
+line-height: 171%;   /*calc(24/14*100%)*/ 
+color: #737373;
+font-weight: 600;
+}
+@media(max-width:479px){
+    .menu__link{
+        font-size: 18px;
+    }
+}
+/*------PAGE--------------------------------------------------------------------------------------------------------------------------------*/
+.page{
+flex: 1 1 auto;/* +flex direction в самом основном блоке (позволили увеличиться main части) */
+}
+.page__main-block {
+}
+/*-----ПОДВАЛ--------------------------------------------------------------------------------------------------------------------------------*/
+.footer{
+
+}
+/*------MAIN-BLOCK------------------------------------------------------------------------------------------------------------------------------*/
+.main-block {
+    position: relative;
+}
+
+.main-block__container {
+}
+.main-block__body {
+    padding: 184px 0px 191px 0px;
+    position: relative;
+    z-index: 2;
+    min-width: 400px;
+}
+@media(max-width:992px){
+    .main-block__body {
+        padding: 120px 0px 191px 0px;
+    }
+}
+.main-block__body > *:not(:last-child){
+margin: 0px 0px 35px 0px;/*предусмотрение разных вариантов исхода событий = одинаковый отступ снизу элементов 1го уровня вложенности*/
+}
+
+.main-block__title {
+    font-size: 58px;
+    line-height: calc(80/58*100%);
+    font-weight: 800;
+    letter-spacing: 0.2px;
+}
+@media(max-width:479px){
+    .main-block__title {
+        font-size: 42px;
+    }
+}
+.main-block__text {
+    color: #737373;
+    font-size: 20px;
+    line-height:1.5;/*вариант записи в % или cal() или значение выражения 30px/20px*/
+}
+.main-block__text:first-child{
+    margin-top: 8rem;/*проверочное свойство*/
+}
+.main-block__buttons {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: -10px 0;
+}
+.main-block__button {
+    border-radius: 37px;
+    display: flex;
+    min-height: 48px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 36px;
+    letter-spacing: 0.2px;
+    font-weight: 700;
+    line-height: 150%;
+    text-align: center;
+}
+.main-block__button:not(:last-child){
+    margin: 10px 10px 0px 0px;
+}
+.main-block__button_border {
+    color: #0d5c63;
+    border:1px solid #0d5c63;
+}
+.main-block__button_orange{
+    background: #ff7b47;
+    color: #fff;
+}
+.main-block__image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+/*.main-block__image img
+   object-position: bottom; - вариант установки картинки в конкретном месте*/
+
+._text{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 30rem;/*дописано проверочное свойство */
+}
+@media(max-width:1300px){
+    .main-block__img img{
+object-position: right;
+    }
+}
+/*при сужении экрана учитываем юзабилити, конкретно здесь, читаемость текста */
+@media(max-width:992px){
+    .main-block__image{
+        opacity: 0.5;
+    }
 }
