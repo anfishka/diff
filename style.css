@@ -36,7 +36,7 @@ body {
     height: 100%;
     line-height: 1;
     font-size: 14px;
-    color: #252B42;
+    color: #252b42;
     font-weight: 500;
     font-family: Montserrat;
 }
@@ -82,7 +82,6 @@ body {
     left: 0;
     top: 0;
     z-index: 50;
-
 }
 
 .header__container {
@@ -90,10 +89,9 @@ body {
     min-height: 104px;
     /*REM?*/
     align-items: center;
-
 }
 
-@media (max-width:479px) {
+@media (max-width: 479px) {
     .header__container {
         min-height: 70px;
     }
@@ -109,19 +107,19 @@ body {
     margin: 0px 0px 0px 133px;
 }
 
-@media(max-width:992px) {
+@media (max-width: 992px) {
     .header__menu {
         margin: 0px 0px 0px 80px;
     }
 }
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
     .header__menu {
         margin: 0px 0px 0px 20px;
     }
 }
 
-@media(max-width:479px) {
+@media (max-width: 479px) {
     .header__menu {
         margin: 0px 0px 0px 40px;
     }
@@ -138,7 +136,8 @@ body {
     gap: 0.5rem;
 }
 
-.menu__item {}
+.menu__item {
+}
 
 .menu__item:not(:last-child()) {
     margin: 0px 21px 0px 0px;
@@ -152,7 +151,7 @@ body {
     font-weight: 600;
 }
 
-@media(max-width:479px) {
+@media (max-width: 479px) {
     .menu__link {
         font-size: 18px;
     }
@@ -164,19 +163,23 @@ body {
     /* +flex direction в самом основном блоке (позволили увеличиться main части) */
 }
 
-.page__main-block {}
+.page__main-block {
+}
 
-.page__services {}
+.page__services {
+}
 
 /*-----ПОДВАЛ--------------------------------------------------------------------------------------------------------------------------------*/
-.footer {}
+.footer {
+}
 
 /*------MAIN-BLOCK------------------------------------------------------------------------------------------------------------------------------*/
 .main-block {
     position: relative;
 }
 
-.main-block__container {}
+.main-block__container {
+}
 
 .main-block__body {
     padding: 184px 0px 191px 0px;
@@ -185,25 +188,25 @@ body {
     min-width: 400px;
 }
 
-@media(max-width:992px) {
+@media (max-width: 992px) {
     .main-block__body {
         padding: 120px 0px 191px 0px;
     }
 }
 
-.main-block__body>*:not(:last-child) {
+.main-block__body > *:not(:last-child) {
     margin: 0px 0px 35px 0px;
     /*предусмотрение разных вариантов исхода событий = одинаковый отступ снизу элементов 1го уровня вложенности*/
 }
 
 .main-block__title {
     font-size: 58px;
-    line-height: calc(80/58*100%);
+    line-height: calc(80 / 58 * 100%);
     font-weight: 800;
     letter-spacing: 0.2px;
 }
 
-@media(max-width:479px) {
+@media (max-width: 479px) {
     .main-block__title {
         font-size: 42px;
     }
@@ -216,7 +219,7 @@ body {
     /*вариант записи в % или cal() или значение выражения 30px/20px*/
 }
 
-@media(max-width:479px) {
+@media (max-width: 479px) {
     .main-block__text {
         color: #494747;
     }
@@ -247,13 +250,13 @@ body {
     margin: 10px 0;
 }
 
-@media(max-width:479px) {
+@media (max-width: 479px) {
     .main-block__button {
         flex: 1 1 100%;
     }
 }
 
-@media(min-width:479px) {
+@media (min-width: 479px) {
     .main-block__button:not(:last-child) {
         margin-right: 10px;
     }
@@ -288,26 +291,30 @@ body {
     /*дописано проверочное свойство */
 }
 
-@media(max-width:1300px) {
+@media (max-width: 1300px) {
     .main-block__img img {
         object-position: right;
     }
 }
 
 /*при сужении экрана учитываем юзабилити, конкретно здесь, читаемость текста */
-@media(max-width:992px) {
+@media (max-width: 992px) {
     .main-block__image {
         opacity: 0.5;
     }
 }
 
-.section {}
+.section {
+}
 
-.services {}
+.services {
+}
 
-.services__container {}
+.services__container {
+}
 
-._container {}
+._container {
+}
 
 .services__body {
     display: flex;
@@ -329,7 +336,8 @@ body {
     /*одинаковая высота для всех обьекетов*/
 }
 
-.item-service {}
+.item-service {
+}
 
 .item-service_green {
     background-color: #0d5c63;
@@ -344,27 +352,27 @@ body {
     color: #fff;
 }
 
-.item-service>*:not(:last-child) {
+.item-service > *:not(:last-child) {
     margin: 0px 0px 10px 0px;
 }
 
-.item-service__icon img {}
+.item-service__icon img {
+}
 
 .item-service__title {
     font-weight: 700;
     letter-spacing: 0.1px;
     font-size: 24px;
-    line-height: calc(32/24*100%);
+    line-height: calc(32 / 24 * 100%);
 }
 
 .item-service__text {
     color: #737373;
-    font-size: calc(20/14*100%);
+    font-size: calc(20 / 14 * 100%);
 }
 
 body {
     color: red;
     background-color: #737373;
     font-size: large;
-    font-family: 'Courier New', Courier, monospace;
 }
