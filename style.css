@@ -370,8 +370,9 @@ body {
     color: #737373;
     font-size: calc(20 / 14 * 100%);
 }
-body{
-    color:red;
+body {
+    color: red;
     background-color: #0d5c63;
     font-size: large;
+    font-style: italic;
 }
