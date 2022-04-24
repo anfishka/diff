@@ -371,5 +371,5 @@ body {
     font-size: calc(20 / 14 * 100%);
 }
 body{
-    float: left;
+    background: #000;
 }
